@@ -1,0 +1,215 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% block title %}{% trans 'send_mail_history' %}{% endblock %}
+
+{% block extrahead %}
+    <script type="text/javascript" src="/static/js/gamemail_list.js"></script>
+    <style type="text/css">
+        .hiddenRow {
+            padding: 0 !important;
+        }
+
+        .mail-table-panel {
+            margin-top: 10px;
+        }
+
+        .fui-alert-circle {
+            color: #d62c1a;
+        }
+
+        .pagination ul {
+            padding-left: 0px;
+            margin-bottom: 0px;
+        }
+
+    </style>
+{% endblock %}
+
+{% block content %}
+
+    <div class="container-fluid">
+        <h4>
+            {% trans 'send_mail_history' %}<a herf='#' class='fui-info-circle small' data-toggle="tooltip" data-placement="right"
+                     title="{% trans 'send_mail_history_tip' %}"></a>
+        </h4>
+        <div class="row">
+            <div class="col-md-12 ">
+                <table class="table table-striped" id="mails" style="border-collapse:collapse;">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>{% trans 'already_send' %}</th>
+                        <th>{% trans 'operater' %}</th>
+                        <th>{% trans 'send_date' %}</th>
+                        <th>{% trans 'is_whole_server_mail' %}</th>
+                        <th>{% trans 'state' %}</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+
+                    {% for group in page.object_list %}
+                        <tr class="accordion-toggle">
+                            <td><a herf='#' data-toggle="collapse" data-target="#child_list{{ forloop.counter }}"
+                                   class='fui-eye' onmouseover='' style='cursor: pointer;'></a></td>
+
+                            {% if group.sended %}
+                                <td><a herf='#' class='fui-check-circle'></a></td>
+                            {% else %}
+                                <td><a herf='#' class='fui-cross-circle'></a></td>
+                            {% endif %}
+
+                            <td>{{ group.gm.user.username }}</td>
+
+                            <td>{{ group.send_date }}</td>
+                            {% if group.is_to_whole_accounts %}
+                                <td><a herf='#' class='fui-check-circle'></a></td>
+                            {% else %}
+                                <td><a herf='#' class='fui-cross-circle'></a></td>
+                            {% endif %}
+
+                            <td><a herf='#' data-toggle="collapse" data-target="#child_list{{ forloop.counter }}"
+                                   onmouseover='' style='cursor: pointer;'>{{ group.get_state_html|safe }}</a></td>
+
+                            {% if group.sended %}
+                                <td></td>
+                            {% else %}
+                                <td><a herf='#' data-tag="del_link" data-del="{{ group.id }}" class='fui-cross'
+                                       onmouseover='' style='cursor: pointer;'></a></td>
+                            {% endif %}
+
+
+                        </tr>
+                        <tr>
+                            <td colspan="6" class="hiddenRow">
+                                <div class="accordian-body collapse" id="child_list{{ forloop.counter }}">
+                                    <div class="col-md-12">
+                                        <div class="panel panel-warning mail-table-panel">
+                                            <div class="panel-heading">{{ group.title }}</div>
+                                            <div class="panel-body">{{ group.content }}</div>
+                                        </div>
+                                        <div class="panel panel-primary mail-table-panel">
+                                            <!-- Default panel contents -->
+                                            <div class="panel-heading">{% trans 'state' %}</div>
+                                            <!-- Table -->
+
+                                            <table class="table table-striped ">
+                                                <thead>
+                                                <tr>
+                                                    <th>{% trans 'target_server' %}</th>
+                                                    <th>{% trans 'state' %}</th>
+                                                    <th>{% trans 'oper' %}</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                {% for mail in group.get_mails %}
+                                                    <tr>
+                                                        <td>{{ mail.server.name }}</td>
+                                                        <td>
+                                                            {{ mail.get_state_html|safe }}
+                                                        </td>
+                                                        <td>
+                                                            {{ mail.get_state_icon_html|safe }}
+                                                        </td>
+                                                    </tr>
+                                                {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="panel panel-info mail-table-panel">
+                                            <!-- Default panel contents -->
+                                            <div class="panel-heading">{% trans 'attachment' %}</div>
+                                            <table class="table table-striped ">
+                                                <thead>
+                                                <tr>
+                                                    <th>{% trans 'type' %}</th>
+                                                    <th>ID</th>
+                                                    <th>{% trans 'num' %}</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                {% for item in group.get_accs %}
+                                                    <tr>
+                                                        <td>{{ item.get_type }}</td>
+                                                        <td>{{ item.get_id }}</td>
+                                                        <td>{{ item.num }}</td>
+                                                    </tr>
+                                                {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="panel panel-success mail-table-panel">
+                                            <!-- Default panel contents -->
+                                            <div class="panel-heading">{% trans 'target_account' %}</div>
+                                            <table class="table table-striped ">
+                                                <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                {% for account in group.get_target_accounts %}
+                                                    <tr>
+                                                        <td>{{ account.account }}</td>
+                                                    </tr>
+                                                {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="pagination">
+                    <ul>
+                        {% for page_number in page.paginator.page_range %}
+                            {% ifequal page_number  page.number %}
+                                <li class="active"><a href="/gamemail_list?page={{ page_number }}"> {{ page_number }}</a></li>
+                            {% else %}
+                                <li><a href="/gamemail_list?page={{ page_number }}"> {{ page_number }}</a></li>
+                            {% endifequal %}
+                        {% endfor %}
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    {#    <p>#}
+
+    {#    </p>#}
+    </div>
+
+    <div class="modal fade" id="confirmModel" tabindex="-1" role="dialog" aria-labelledby="confirmModelLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="confirmModelLabel">{% trans 'confirm' %}</h4>
+                </div>
+                <div class="modal-body">
+                    {% trans 'besure_to_delete_mail' %}
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">{% trans 'close' %}</button>
+                    <button type="button" class="btn btn-primary">{% trans 'confirm' %}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

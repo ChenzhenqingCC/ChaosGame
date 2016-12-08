@@ -1,0 +1,365 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-15 11:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\templates\account\account.html:23 .\templates\base.html.py:48
+msgid "account_check"
+msgstr "账号查询"
+
+#: .\templates\account\account.html:34 .\templates\ban\ban_edit.html.py:49
+#: .\templates\base.html:51 .\templates\server.html.py:35
+msgid "server"
+msgstr "服务器"
+
+#: .\templates\account\account.html:50
+msgid "id_in_game_setting"
+msgstr "游戏内设置界面里ID名"
+
+#: .\templates\account\account.html:53
+msgid "game_name"
+msgstr "名称"
+
+#: .\templates\account\account.html:55
+msgid "name_in_game"
+msgstr "游戏内名字"
+
+#: .\templates\account\account.html:57
+msgid "run_check"
+msgstr "账号查询"
+
+#: .\templates\account\account.html:64
+msgid "run_check_result"
+msgstr "查询"
+
+#: .\templates\admin\base_site.html:3
+msgid "Django site admin"
+msgstr "后台管理"
+
+#: .\templates\admin\base_site.html:8
+#: .\templates\gamemail\gamemail_send.html:12
+msgid "back"
+msgstr "返回"
+
+#: .\templates\ban\ban_edit.html:32 .\templates\base.html.py:49
+msgid "ban_unban"
+msgstr "封号/解封"
+
+#: .\templates\ban\ban_edit.html:64
+msgid "oper_reason"
+msgstr "操作原因"
+
+#: .\templates\ban\ban_edit.html:68
+msgid "ban_time"
+msgstr "封禁时限"
+
+#: .\templates\ban\ban_edit.html:70 .\templates\ban\ban_edit.html.py:71
+msgid "num_hour"
+msgstr "个小时"
+
+#: .\templates\ban\ban_edit.html:72 .\templates\ban\ban_edit.html.py:73
+#: .\templates\ban\ban_edit.html:74
+msgid "num_day"
+msgstr "天"
+
+#: .\templates\ban\ban_edit.html:75
+msgid "forever"
+msgstr "永久"
+
+#: .\templates\ban\ban_edit.html:79
+msgid "ban_state"
+msgstr "封禁状态"
+
+#: .\templates\ban\ban_edit.html:81
+msgid "ban"
+msgstr "封号"
+
+#: .\templates\ban\ban_edit.html:82
+msgid "ban_chat"
+msgstr "禁言"
+
+#: .\templates\ban\ban_edit.html:83
+msgid "unban"
+msgstr "解除封号"
+
+#: .\templates\ban\ban_edit.html:84
+msgid "unban_chat"
+msgstr "解除禁言"
+
+#: .\templates\ban\ban_edit.html:88
+msgid "submit"
+msgstr "提交"
+
+#: .\templates\ban\ban_edit.html:95 .\templates\base.html.py:59
+#: .\templates\flashnews\flashnews.html:72
+#: .\templates\gamemail\gamemail.html:122 .\templates\notice.html.py:45
+msgid "history"
+msgstr "历史"
+
+#: .\templates\base.html:26
+msgid "op_result"
+msgstr "操作结果:"
+
+#: .\templates\base.html:45
+msgid "homepage"
+msgstr "主页"
+
+#: .\templates\base.html:47 .\templates\notice.html.py:4
+#: .\templates\notice_send.html:4
+msgid "notice"
+msgstr "公告"
+
+#: .\templates\base.html:50 .\templates\flashnews\flashnews.html.py:40
+msgid "flashnews"
+msgstr "跑马灯"
+
+#: .\templates\base.html:55 .\templates\gamemail\gamemail.html.py:46
+msgid "mail"
+msgstr "邮件"
+
+#: .\templates\base.html:58
+msgid "sendmail"
+msgstr "发送邮件"
+
+#: .\templates\base.html:67
+msgid "welcome"
+msgstr "欢迎你"
+
+#: .\templates\base.html:69
+msgid "logout"
+msgstr "注销"
+
+#: .\templates\base.html:71 .\templates\login.html.py:5
+#: .\templates\login.html:30
+msgid "login"
+msgstr "登陆"
+
+#: .\templates\flashnews\flashnews.html:51
+#: .\templates\gamemail\gamemail.html:67
+#: .\templates\gamemail\gamemail_list.html:100 .\templates\server.html.py:46
+msgid "target_server"
+msgstr "目标服务器"
+
+#: .\templates\flashnews\flashnews.html:56
+msgid "message"
+msgstr "消息"
+
+#: .\templates\flashnews\flashnews.html:61
+#: .\templates\gamemail\gamemail.html:111
+#: .\templates\gamemail\gamemail_list.html:44
+msgid "send_date"
+msgstr "发送日期"
+
+#: .\templates\flashnews\flashnews.html:65
+#: .\templates\gamemail\gamemail.html:115
+msgid "save"
+msgstr "保存"
+
+#: .\templates\gamemail\gamemail.html:56
+msgid "mail_title"
+msgstr "邮件标题"
+
+#: .\templates\gamemail\gamemail.html:61
+msgid "mail_content"
+msgstr "邮件内容"
+
+#: .\templates\gamemail\gamemail.html:68
+msgid "only_whole_server_mail_can_select_muti"
+msgstr "只有全服邮件才能选择多个目标服务器"
+
+#: .\templates\gamemail\gamemail.html:73
+msgid "send_whole_server_mail"
+msgstr "发送全服邮件"
+
+#: .\templates\gamemail\gamemail.html:79
+msgid "to_these_accounts"
+msgstr "对以下账号发送邮件"
+
+#: .\templates\gamemail\gamemail.html:80
+msgid "type_enter_to_split"
+msgstr "按回车分割账号"
+
+#: .\templates\gamemail\gamemail.html:88
+msgid "add_attach_item"
+msgstr "添加附带道具"
+
+#: .\templates\gamemail\gamemail.html:90
+msgid "item"
+msgstr "道具"
+
+#: .\templates\gamemail\gamemail.html:91
+msgid "coin"
+msgstr "金币"
+
+#: .\templates\gamemail\gamemail.html:92
+msgid "diamond"
+msgstr "钻石"
+
+#: .\templates\gamemail\gamemail.html:97
+#: .\templates\gamemail\gamemail_list.html:126
+msgid "type"
+msgstr "类型"
+
+#: .\templates\gamemail\gamemail.html:99
+#: .\templates\gamemail\gamemail_list.html:128
+msgid "num"
+msgstr "数量"
+
+#: .\templates\gamemail\gamemail.html:137
+msgid "besure_to_send_this_mail"
+msgstr "确定要发出以下邮件么?"
+
+#: .\templates\gamemail\gamemail.html:145
+#: .\templates\gamemail\gamemail.html:166
+#: .\templates\gamemail\gamemail_list.html:207
+msgid "close"
+msgstr "关闭"
+
+#: .\templates\gamemail\gamemail.html:146
+#: .\templates\gamemail\gamemail_list.html:201
+#: .\templates\gamemail\gamemail_list.html:208
+msgid "confirm"
+msgstr "确认"
+
+#: .\templates\gamemail\gamemail.html:158
+msgid "submit_content_has_these_error"
+msgstr "提交内容有以下错误"
+
+#: .\templates\gamemail\gamemail_list.html:4
+#: .\templates\gamemail\gamemail_list.html:33
+msgid "send_mail_history"
+msgstr "发送邮件历史"
+
+#: .\templates\gamemail\gamemail_list.html:34
+msgid "send_mail_history_tip"
+msgstr ""
+"在这里可以查看发送邮件状态已经重新发送失败邮件。请注意，在这里重发超时邮件是"
+"安全的，并不会导致玩家多次收到邮件"
+
+#: .\templates\gamemail\gamemail_list.html:42
+msgid "already_send"
+msgstr "已发送"
+
+#: .\templates\gamemail\gamemail_list.html:43
+msgid "operater"
+msgstr "操作人"
+
+#: .\templates\gamemail\gamemail_list.html:45
+msgid "is_whole_server_mail"
+msgstr "是否全服邮件"
+
+#: .\templates\gamemail\gamemail_list.html:46
+#: .\templates\gamemail\gamemail_list.html:94
+#: .\templates\gamemail\gamemail_list.html:101
+msgid "state"
+msgstr "状态"
+
+#: .\templates\gamemail\gamemail_list.html:102 .\templates\server.html.py:51
+msgid "oper"
+msgstr "操作"
+
+#: .\templates\gamemail\gamemail_list.html:122
+msgid "attachment"
+msgstr "附件"
+
+#: .\templates\gamemail\gamemail_list.html:144
+msgid "target_account"
+msgstr "目标账号"
+
+#: .\templates\gamemail\gamemail_list.html:204
+msgid "besure_to_delete_mail"
+msgstr "确定要删除该邮件信息么?"
+
+#: .\templates\gamemail\gamemail_send.html:11
+msgid "mail_result_1"
+msgstr "邮件已经进入队列，您可以在"
+
+#: .\templates\gamemail\gamemail_send.html:11
+msgid "mail_result_2"
+msgstr "这里"
+
+#: .\templates\gamemail\gamemail_send.html:11
+msgid "mail_result_3"
+msgstr "查看结果，或者"
+
+#: .\templates\gamemail\gamemail_send.html:12
+msgid "continue_to_send"
+msgstr "继续发送"
+
+#: .\templates\index.html:10
+msgid "building"
+msgstr "建设中"
+
+#: .\templates\language.html:7
+msgid "out_of_time"
+msgstr "超时"
+
+#: .\templates\language.html:8
+msgid "error_code"
+msgstr "错误码"
+
+#: .\templates\language.html:9
+msgid "success"
+msgstr "成功"
+
+#: .\templates\language.html:10
+msgid "sending"
+msgstr "发送中"
+
+#: .\templates\language.html:11
+msgid "resend_mail_tip"
+msgstr "在多次点击重发也是安全的，不用担心会重复发邮件"
+
+#: .\templates\language.html:12
+msgid "resend"
+msgstr "重发"
+
+#: .\templates\login.html:14
+msgid "account_error"
+msgstr "用户不存在或密码错误"
+
+#: .\templates\login.html:20
+msgid "account_name"
+msgstr "用户名："
+
+#: .\templates\login.html:26
+msgid "account_password"
+msgstr "密码："
+
+#: .\templates\notice.html:32
+msgid "content_is"
+msgstr "内容："
+
+#: .\templates\notice.html:37
+msgid "send_change"
+msgstr "发送修改"
+
+#: .\templates\notice_send.html:11
+msgid "notice_send_result"
+msgstr "公告修改已经发送，稍等1-2分钟后生效"
+
+#: .\templates\server.html:56
+msgid "add_parm"
+msgstr "附加参数"
+
+#: .\templates\server.html:61
+msgid "oper_result"
+msgstr "操作结果"
+
+#: .\templates\server.html:66
+msgid "run"
+msgstr "运行"

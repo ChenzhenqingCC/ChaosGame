@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+
+
+{% block extrahead %}
+    <script type="text/javascript">
+        var django = django || {};
+        django.jQuery = $
+    </script>
+    <link type="text/css" href="/static/tag-it/css/jquery.tagit.css" rel="stylesheet">
+    <link type="text/css" href="/static/tag-it/css/tagit.css" rel="stylesheet">
+    <script type="text/javascript" src="{% url 'admin:jsi18n' %}"></script>
+    <script type="text/javascript" src="/static/admin/js/core.js"></script>
+    <script type="text/javascript" src="/static/tag-it/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/static/tag-it/js/tag-it.min.js"></script>
+    <script type="text/javascript" src="/static/js/gamemail.js"></script>
+    <script type="text/javascript" src="/static/js/waitingdialog.js"></script>
+    {{ form.media }}
+    <style type="text/css">
+        .selector h2 {
+            font-size: 1.2em;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+
+        .selector-chosen h2 {
+            background: #1ABC9C;
+            color: #fff;
+        }
+
+        .clockbox h2 {
+            font-size: 1.2em;
+            padding: 0px 10px 0px 10px;
+            border-bottom: 0px;
+        }
+
+        .tagsinput:disabled {
+            background: #ccc;
+        }
+
+    </style>
+{% endblock %}
+
+{% block title %}{% trans 'mail' %}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-8">
+                <form action="/gamemail" method="post" class="form-horizontal" id="gamemail_form">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        {{ form.title.errors }}
+                        <label for="id_title" class="control-label">{% trans 'mail_title' %}:</label>
+                        <input type="text" class="form-control" id="id_title" required name="title"/>
+                    </div>
+                    <div class="form-group">
+                        {{ form.message.errors }}
+                        <label for="id_message" class="control-label">{% trans 'mail_content' %}:</label>
+                        <textarea class="form-control" rows="10" id="id_message" required name="message"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        {{ form.server_list.errors }}
+                        <label for="{{ form.server_list.id_for_label }}" class="control-label">{% trans 'target_server' %}<a herf='#' class='fui-info-circle small' data-toggle="tooltip" data-placement="right"
+                     title="{% trans 'only_whole_server_mail_can_select_muti' %}"></a>:</label>
+                        <div class="control-label">{{ form.server_list }}</div>
+                    </div>
+                    <div class="form-group">
+                        {{ form.whole_accounts.errors }}
+                        <label for="id_whole_accounts" class="control-label">{% trans 'send_whole_server_mail' %}:</label>
+                        <input type="checkbox" data-toggle="switch" id="id_whole_accounts" name="whole_accounts"/>
+                    </div>
+                    <div class="collapse in" id = "id_account_collapse">
+                        <div class="form-group">
+                            {{ form.message.errors }}
+                            <label for="id_accounts" class="control-label">{% trans 'to_these_accounts' %}<a herf='#' class='fui-info-circle small' data-toggle="tooltip" data-placement="right"
+                     title="{% trans 'type_enter_to_split' %}"></a>：</label>
+                            <div class="tagsinput-primary">
+                                <input name="accounts" class="tagsinput" data-role="tagsinput"
+                                       value="" id="id_accounts"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_add_btns" class="control-label">{% trans 'add_attach_item' %}：</label>
+                        <div class="row" id="id_add_btns">
+                            <a data-type="item" href="#" class="btn btn-success" role="button">{% trans 'item' %}</a>
+                            <a data-type="coin" href="#" class="btn btn-warning" role="button">{% trans 'coin' %}</a>
+                            <a data-type="diamond" href="#" class="btn btn-info" role="button">{% trans 'diamond' %}</a>
+                        </div>
+                        <table class="table" id="item_table">
+                            <thead>
+                            <tr>
+                                <th>{% trans 'type' %}</th>
+                                <th>ID</th>
+                                <th>{% trans 'num' %}</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody id="id_item_tbl_body">
+
+                            </tbody>
+                        </table>
+                        <input type="hidden" id="id_hidden_items" name="hidden_items"/>
+                    </div>
+                    <div class="form-group">
+                        {{ form.send_date.errors }}
+                        <label for="{{ form.send_date.id_for_label }}" class="control-label">{% trans 'send_date' %}:</label>
+                        {{ form.send_date }}
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn btn-primary btn-block" type="submit" id="id_submit_btn">{% trans 'save' %}</button>
+                    </div>
+                </form>
+            </div>
+            <div class=col-md-2 col-md-offset-2>
+                <ul class="object-tools">
+                    <li>
+                        <a href="/gamemail_list" class="historylink">{% trans 'history' %}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="confirmModel" tabindex="-1" role="dialog" aria-labelledby="confirmModelLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="confirmModelLabel">{% trans 'besure_to_send_this_mail' %}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid" id="id_model_body_content">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">{% trans 'close' %}</button>
+                    <button type="button" class="btn btn-primary">{% trans 'confirm' %}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="errorModel" tabindex="-1" role="dialog" aria-labelledby="confirmModelLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="confirmModelLabel">{% trans 'submit_content_has_these_error' %}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid" id="id_error_body_content">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">{% trans 'close' %}</button>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+

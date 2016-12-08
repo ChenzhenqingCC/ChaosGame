@@ -1,0 +1,5 @@
+#实现 p4 clean OR 抽出干净workplace编译 done
+    2014/5/22 p4 clean 还是用os.system实现了，没有找到使用p4python调用p4 -x - sync -f -q这样语句的方法
+#安全无误的发布一个外部正式版本+差分包的流程
+
+#mac实现分支版本编译->xcode编译由使用插件转为纯脚本

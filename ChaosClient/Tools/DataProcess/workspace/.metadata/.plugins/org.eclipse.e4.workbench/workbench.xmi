@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="ASCII"?>
+<application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_Fe5-ARlpEeWdHJ2lhKXE6g" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_Fe5-AhlpEeWdHJ2lhKXE6g" bindingContexts="_Fe5-BBlpEeWdHJ2lhKXE6g">
+  <tags>activeSchemeId:com.arm.mali.texturecompressiontool.scheme</tags>
+  <tags>ModelMigrationProcessor.001</tags>
+  <children xsi:type="basic:TrimmedWindow" xmi:id="_Fe5-AhlpEeWdHJ2lhKXE6g" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" selectedElement="_FjPrcBlpEeWdHJ2lhKXE6g" label="%trimmedwindow.label.eclipseSDK" x="2140" y="-13" width="1024" height="768">
+    <persistedState key="coolBarVisible" value="true"/>
+    <persistedState key="perspectiveBarVisible" value="true"/>
+    <persistedState key="workingSets" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workingSets/>"/>
+    <persistedState key="aggregateWorkingSetId"/>
+    <tags>topLevel</tags>
+    <tags>shellMaximized</tags>
+    <children xsi:type="basic:PartSashContainer" xmi:id="_FjPrcBlpEeWdHJ2lhKXE6g" selectedElement="_FjPrcRlpEeWdHJ2lhKXE6g" horizontal="true">
+      <children xsi:type="advanced:PerspectiveStack" xmi:id="_FjPrcRlpEeWdHJ2lhKXE6g" containerData="7500" selectedElement="_FlpfMBlpEeWdHJ2lhKXE6g">
+        <children xsi:type="advanced:Perspective" xmi:id="_FlpfMBlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.TextureCompressionToolPerspective" selectedElement="_FlpfMRlpEeWdHJ2lhKXE6g" label="Texture Compression Tool" iconURI="platform:/plugin/com.arm.mali.texturecompressiontool/icons/TCTLogo16.png">
+          <tags>persp.viewSC:com.arm.mali.texturecompressiontool.TextureTreeView</tags>
+          <tags>persp.viewSC:org.eclipse.ui.views.ProgressView</tags>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_FlpfMRlpEeWdHJ2lhKXE6g" selectedElement="_FlpfMhlpEeWdHJ2lhKXE6g">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_FlpfMhlpEeWdHJ2lhKXE6g" containerData="9500" selectedElement="_FlpfMxlpEeWdHJ2lhKXE6g">
+              <children xsi:type="advanced:Placeholder" xmi:id="_FlpfMxlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.TextureTreeView" containerData="8500" ref="_Flmb4BlpEeWdHJ2lhKXE6g"/>
+              <children xsi:type="advanced:Placeholder" xmi:id="_FlpfNBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.views.ProgressView" toBeRendered="false" containerData="1500" ref="_Flo4IBlpEeWdHJ2lhKXE6g">
+                <tags>NoMove</tags>
+              </children>
+            </children>
+            <children xsi:type="advanced:Placeholder" xmi:id="_FlpfNRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.editorss" toBeRendered="false" containerData="500" ref="_FllNwBlpEeWdHJ2lhKXE6g"/>
+          </children>
+        </children>
+      </children>
+      <children xsi:type="basic:PartStack" xmi:id="_FjPrchlpEeWdHJ2lhKXE6g" elementId="stickyFolderRight" toBeRendered="false" containerData="2500">
+        <children xsi:type="advanced:Placeholder" xmi:id="_FjPrcxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.internal.introview" toBeRendered="false" ref="_FjOdUBlpEeWdHJ2lhKXE6g"/>
+      </children>
+    </children>
+    <sharedElements xsi:type="basic:Part" xmi:id="_FjOdUBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.internal.introview" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Welcome" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.gif" closeable="true">
+      <tags>View</tags>
+      <tags>categoryTag:General</tags>
+    </sharedElements>
+    <sharedElements xsi:type="advanced:Area" xmi:id="_FllNwBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.editorss">
+      <children xsi:type="basic:PartStack" xmi:id="_FllNwRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.e4.primaryDataStack">
+        <tags>newtablook</tags>
+        <tags>org.eclipse.e4.primaryDataStack</tags>
+        <tags>EditorStack</tags>
+      </children>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_Flmb4BlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.TextureTreeView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Texture Compression View" iconURI="platform:/plugin/com.arm.mali.texturecompressiontool/icons/TCTLogo16.png" closeable="true">
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
+      <tags>View</tags>
+      <tags>categoryTag:Texture Compression Tool</tags>
+      <tags>activeOnClose</tags>
+      <menus xmi:id="_FmAEgBlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.TextureTreeView">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_FmAEgRlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.TextureTreeView"/>
+    </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_Flo4IBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.views.ProgressView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Progress View" iconURI="platform:/plugin/com.arm.mali.texturecompressiontool/icons/pview.gif" closeable="true">
+      <tags>View</tags>
+      <tags>categoryTag:General</tags>
+    </sharedElements>
+    <trimBars xmi:id="_FjVLABlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.main.toolbar">
+      <children xsi:type="menu:ToolControl" xmi:id="_FkJDUBlpEeWdHJ2lhKXE6g" elementId="PerspectiveSpacer" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
+        <tags>stretch</tags>
+      </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_FkKRcBlpEeWdHJ2lhKXE6g" elementId="Spacer Glue" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
+        <tags>glue</tags>
+      </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_FkLfkBlpEeWdHJ2lhKXE6g" elementId="SearchField" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.quickaccess.SearchField"/>
+      <children xsi:type="menu:ToolControl" xmi:id="_Fku5MBlpEeWdHJ2lhKXE6g" elementId="Search-PS Glue" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
+        <tags>glue</tags>
+      </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_FkyjkBlpEeWdHJ2lhKXE6g" elementId="PerspectiveSwitcher" toBeRendered="false" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.e4.ui.workbench.addons.perspectiveswitcher.PerspectiveSwitcher">
+        <tags>Draggable</tags>
+      </children>
+    </trimBars>
+    <trimBars xmi:id="_FkyjkRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.trim.status" side="Bottom">
+      <children xsi:type="menu:ToolControl" xmi:id="_FkzKoBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.StatusLine" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.StandardTrim">
+        <tags>stretch</tags>
+      </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_FlDpUBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.HeapStatus" toBeRendered="false" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.StandardTrim"/>
+      <children xsi:type="menu:ToolControl" xmi:id="_FlJI4BlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.ProgressBar" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.StandardTrim">
+        <tags>Draggable</tags>
+      </children>
+    </trimBars>
+    <trimBars xmi:id="_Fla1sBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.trim.vertical1" side="Left"/>
+    <trimBars xmi:id="_FlbcwBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.trim.vertical2" side="Right"/>
+  </children>
+  <bindingTables xmi:id="_Fe5-AxlpEeWdHJ2lhKXE6g" contributorURI="platform:/plugin/org.eclipse.ui.workbench" bindingContext="_Fe5-BBlpEeWdHJ2lhKXE6g"/>
+  <bindingTables xmi:id="_FfbicBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.contexts.window" bindingContext="_Fe5-BRlpEeWdHJ2lhKXE6g">
+    <bindings xmi:id="_FffM0BlpEeWdHJ2lhKXE6g" keySequence="CTRL+O" command="_FfOHHRlpEeWdHJ2lhKXE6g"/>
+    <bindings xmi:id="_Fffz4BlpEeWdHJ2lhKXE6g" keySequence="DEL" command="_FfOuJxlpEeWdHJ2lhKXE6g"/>
+    <bindings xmi:id="_Fffz4RlpEeWdHJ2lhKXE6g" keySequence="ESC" command="_FfOHIBlpEeWdHJ2lhKXE6g"/>
+    <bindings xmi:id="_Fffz4hlpEeWdHJ2lhKXE6g" keySequence="F7" command="_FfNgJBlpEeWdHJ2lhKXE6g"/>
+    <bindings xmi:id="_Fffz4xlpEeWdHJ2lhKXE6g" keySequence="CTRL+S" command="_FfOHKxlpEeWdHJ2lhKXE6g"/>
+    <bindings xmi:id="_Fffz5BlpEeWdHJ2lhKXE6g" keySequence="CTRL+A" command="_FfNgIxlpEeWdHJ2lhKXE6g"/>
+  </bindingTables>
+  <rootContext xmi:id="_Fe5-BBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.contexts.dialogAndWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="In Dialogs and Windows" description="Either a dialog or a window is open">
+    <children xmi:id="_Fe5-BRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.contexts.window" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="In Windows" description="A window is open">
+      <children xmi:id="_Fe5-BhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.e4.ui.contexts.views" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="%bindingcontext.name.bindingView"/>
+      <children xmi:id="_FfQjURlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.textEditorScope" name="Editing Text" description="Editing Text Context"/>
+    </children>
+    <children xmi:id="_Fe5-BxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.contexts.dialog" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="In Dialogs" description="A dialog is open"/>
+  </rootContext>
+  <rootContext xmi:id="_FfQjUBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.contexts.workbenchMenu" name="Workbench Menu" description="When no Workbench windows are active"/>
+  <rootContext xmi:id="_FfQjUhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.contexts.actionSet" name="Action Set" description="Parent context for action sets"/>
+  <descriptors xmi:id="_FgZLwBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.e4.ui.compatibility.editor" allowMultiple="true" category="org.eclipse.e4.primaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor">
+    <tags>Editor</tags>
+  </descriptors>
+  <descriptors xmi:id="_FgbA8BlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.TextureTreeView" label="Texture Compression View" iconURI="platform:/plugin/com.arm.mali.texturecompressiontool/icons/TCTLogo16.png" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:Texture Compression Tool</tags>
+  </descriptors>
+  <descriptors xmi:id="_Fgf5cBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.views.ProgressView" label="Progress View" iconURI="platform:/plugin/com.arm.mali.texturecompressiontool/icons/pview.gif" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:General</tags>
+  </descriptors>
+  <descriptors xmi:id="_Fgf5cRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.internal.introview" label="Welcome" iconURI="platform:/plugin/org.eclipse.ui/icons/full/eview16/defaultview_misc.gif" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:General</tags>
+  </descriptors>
+  <commands xmi:id="_FfM48BlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.pinEditor" commandName="Pin Editor" description="Pin the current editor" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfM48RlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.navigate.nextTab" commandName="Next Tab" description="Switch to the next tab" category="_FfLq0hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfM48hlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.quickAccess" commandName="Quick Access" description="Quickly access UI elements" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfM48xlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.command.set_output_directory" commandName="Set output directory" description="Select an output directory" category="_FfLq1BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfM49BlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.navigate.expandAll" commandName="Expand All" description="Expand the current tree" category="_FfLq0hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfM49RlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.file.saveAll" commandName="Save All" description="Save all current contents" category="_FfLq1RlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfM49hlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.showKeyAssist" commandName="Show Key Assist" description="Show the key assist dialog" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfM49xlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.file.properties" commandName="Properties" description="Display the properties of the selected item" category="_FfLq1RlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfM4-BlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.file.closeOthers" commandName="Close Others" description="Close all editors except the one that is active" category="_FfLq1RlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfM4-RlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.file.save" commandName="Save" description="Save the current contents" category="_FfLq1RlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfM4-hlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.preferences" commandName="Preferences" description="Open the preferences dialog" category="_FfLq1hlpEeWdHJ2lhKXE6g">
+    <parameters xmi:id="_FfNgABlpEeWdHJ2lhKXE6g" elementId="preferencePageId" name="Preference Page"/>
+  </commands>
+  <commands xmi:id="_FfNgARlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.previousEditor" commandName="Previous Editor" description="Switch to the previous editor" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgAhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.activeContextInfo" commandName="Show activeContext Info" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgAxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.edit.findReplace" commandName="Find and Replace" description="Find and replace text" category="_FfLq0xlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgBBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.edit.copy" commandName="Copy" description="Copy the selection to the clipboard" category="_FfLq0xlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgBRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.nextView" commandName="Next View" description="Switch to the next view" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgBhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.help.tipsAndTricksAction" commandName="Tips and Tricks" description="Open the tips and tricks help page" category="_FfLq2BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgBxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.edit.text.contentAssist.contextInformation" commandName="Context Information" description="Show Context Information" category="_FfLq0xlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgCBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.file.saveAs" commandName="Save As" description="Save the current contents to another location" category="_FfLq1RlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgCRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.nextEditor" commandName="Next Editor" description="Switch to the next editor" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgChlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.previousPerspective" commandName="Previous Perspective" description="Switch to the previous perspective" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgCxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.help.helpContents" commandName="Help Contents" description="Open the help contents" category="_FfLq2BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgDBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.edit.delete" commandName="Delete" description="Delete the selection" category="_FfLq0xlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgDRlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.command.zoom_in" commandName="Zoom in" description="Zoom into the image" category="_FfLq1BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgDhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.navigate.collapseAll" commandName="Collapse All" description="Collapse the current tree" category="_FfLq0hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgDxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.navigate.goInto" commandName="Go Into" description="Navigate into the selected item" category="_FfLq0hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgEBlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.command.fit_in_view" commandName="Fit in view" description="Fit the image to the view" category="_FfLq1BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgERlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.maximizePart" commandName="Maximize Active View or Editor" description="Toggles maximize/restore state of active view or editor" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgEhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.lockToolBar" commandName="Lock the Toolbars" description="Lock the Toolbars" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgExlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.file.exit" commandName="Exit" description="Exit the application" category="_FfLq1RlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgFBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.newEditor" commandName="New Editor" description="Open another editor on the active editor's input" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgFRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.minimizePart" commandName="Minimize Active View or Editor" description="Minimizes the active view or editor" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgFhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.edit.addBookmark" commandName="Add Bookmark" description="Add a bookmark" category="_FfLq0xlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgFxlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.command.save_image_canvas" commandName="Save image as..." description="Save selected image as..." category="_FfLq1BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgGBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.edit.text.contentAssist.proposals" commandName="Content Assist" description="Content Assist" category="_FfLq0xlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgGRlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.command.zoom_out" commandName="Zoom out" description="Zoom out of the image" category="_FfLq1BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgGhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.navigate.up" commandName="Up" description="Navigate up one level" category="_FfLq0hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgGxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.activateEditor" commandName="Activate Editor" description="Activate the editor" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgHBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.showSystemMenu" commandName="Show System Menu" description="Show the system menu" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgHRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.previousView" commandName="Previous View" description="Switch to the previous view" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgHhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.file.revert" commandName="Revert" description="Revert to the last saved state" category="_FfLq1RlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgHxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.views.showView" commandName="Show View" description="Shows a particular view" category="_FfLq0BlpEeWdHJ2lhKXE6g">
+    <parameters xmi:id="_FfNgIBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.views.showView.viewId" name="View"/>
+    <parameters xmi:id="_FfNgIRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.views.showView.secondaryId" name="Secondary Id"/>
+    <parameters xmi:id="_FfNgIhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.views.showView.makeFast" name="As FastView"/>
+  </commands>
+  <commands xmi:id="_FfNgIxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.edit.selectAll" commandName="Select All" description="Select all" category="_FfLq0xlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgJBlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.command.compress" commandName="Compress selected images..." description="Compress the selected images in the table (unavailable when both HDR and LDR textures are selected)" category="_FfLq1BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfNgJRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.savePerspective" commandName="Save Perspective As" description="Save the current perspective" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHEBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.edit.move" commandName="Move..." description="Move the selected item" category="_FfLq1RlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHERlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.file.import" commandName="Import" description="Import" category="_FfLq1RlpEeWdHJ2lhKXE6g">
+    <parameters xmi:id="_FfOHEhlpEeWdHJ2lhKXE6g" elementId="importWizardId" name="Import Wizard"/>
+  </commands>
+  <commands xmi:id="_FfOHExlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.perspectives.showPerspective" commandName="Show Perspective" description="Show a particular perspective" category="_FfLq0RlpEeWdHJ2lhKXE6g">
+    <parameters xmi:id="_FfOHFBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.perspectives.showPerspective.perspectiveId" name="Parameter"/>
+    <parameters xmi:id="_FfOHFRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.perspectives.showPerspective.newWindow" name="In New Window"/>
+  </commands>
+  <commands xmi:id="_FfOHFhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.navigate.linkWithEditor" commandName="Toggle Link with Editor " description="Toggles linking of a view's selection with the active editor's selection" category="_FfLq0hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHFxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.openEditorDropDown" commandName="Quick Switch Editor" description="Open the editor drop down list" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHGBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.switchToEditor" commandName="Switch to Editor" description="Switch to an editor" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHGRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.help.dynamicHelp" commandName="Dynamic Help" description="Open the dynamic help" category="_FfLq2BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHGhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.navigate.nextSubTab" commandName="Next Sub-Tab" description="Switch to the next sub-tab" category="_FfLq0hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHGxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.resetPerspective" commandName="Reset Perspective" description="Reset the current perspective to its default state" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHHBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.edit.undo" commandName="Undo" description="Undo the last operation" category="_FfLq0xlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHHRlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.command.open_images" commandName="Open images..." description="Open images and add them to the table" category="_FfLq1BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHHhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.file.closePart" commandName="Close Part" description="Close the active workbench part" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHHxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.help.installationDialog" commandName="Installation Information" description="Open the installation dialog" category="_FfLq2BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHIBlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.command.stop_compression" commandName="Cancel all compression jobs" description="Stop the current compression process" category="_FfLq1BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHIRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.navigate.back" commandName="Back" description="Navigate back" category="_FfLq0hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHIhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.file.closeAll" commandName="Close All" description="Close all editors" category="_FfLq1RlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHIxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.edit.cut" commandName="Cut" description="Cut the selection to the clipboard" category="_FfLq0xlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHJBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.edit.paste" commandName="Paste" description="Paste from the clipboard" category="_FfLq0xlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHJRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.part.nextPage" commandName="Next Page" description="Switch to the next page" category="_FfLq0hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHJhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.part.previousPage" commandName="Previous Page" description="Switch to the previous page" category="_FfLq0hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHJxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.navigate.next" commandName="Next" description="Navigate to the next item" category="_FfLq0hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHKBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.closePerspective" commandName="Close Perspective" description="Close the current perspective" category="_FfLq1hlpEeWdHJ2lhKXE6g">
+    <parameters xmi:id="_FfOHKRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.closePerspective.perspectiveId" name="Perspective Id"/>
+  </commands>
+  <commands xmi:id="_FfOHKhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.navigate.previous" commandName="Previous" description="Navigate to the previous item" category="_FfLq0hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHKxlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.command.save_image" commandName="Save image(s) as..." description="Save selected image(s) as..." category="_FfLq1BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHLBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.edit.rename" commandName="Rename" description="Rename the selected item" category="_FfLq1RlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHLRlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.command.original_size" commandName="Original size" description="Display the original size of the image" category="_FfLq1BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHLhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.file.export" commandName="Export" description="Export" category="_FfLq1RlpEeWdHJ2lhKXE6g">
+    <parameters xmi:id="_FfOHLxlpEeWdHJ2lhKXE6g" elementId="exportWizardId" name="Export Wizard"/>
+  </commands>
+  <commands xmi:id="_FfOHMBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.help.aboutAction" commandName="About" description="Open the about dialog" category="_FfLq2BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHMRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.file.closeAllSaved" commandName="Close All Saved" description="Close all saved editors" category="_FfLq1RlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHMhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.edit.redo" commandName="Redo" description="Redo the last operation" category="_FfLq0xlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHMxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.file.print" commandName="Print" description="Print" category="_FfLq1RlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOHNBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.newWizard" commandName="New" description="Open the New item wizard" category="_FfLq1RlpEeWdHJ2lhKXE6g">
+    <parameters xmi:id="_FfOHNRlpEeWdHJ2lhKXE6g" elementId="newWizardId" name="New Wizard"/>
+  </commands>
+  <commands xmi:id="_FfOHNhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.newWindow" commandName="New Window" description="Open another window" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuIBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.navigate.forwardHistory" commandName="Forward History" description="Move forward in the editor navigation history" category="_FfLq0hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuIRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.spy" commandName="Show Contributing Plug-in" description="Shows contribution information for the currently selected element" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuIhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.help.helpSearch" commandName="Help Search" description="Open the help search" category="_FfLq2BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuIxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.file.close" commandName="Close" description="Close the active editor" category="_FfLq1RlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuJBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.file.restartWorkbench" commandName="Restart" description="Restart the workbench" category="_FfLq1RlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuJRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.customizePerspective" commandName="Customize Perspective" description="Customize the current perspective" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuJhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.help.quickStartAction" commandName="Welcome" description="Show help for beginning users" category="_FfLq2BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuJxlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.command.remove_selection" commandName="Remove selected images from list" description="Remove the selected images from list" category="_FfLq1BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuKBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.navigate.previousSubTab" commandName="Previous Sub-Tab" description="Switch to the previous sub-tab" category="_FfLq0hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuKRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.hideShowEditors" commandName="Toggle Editor Area Visibility" description="Toggles the visibility of the editor area" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuKhlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.command.compare_images" commandName="Compare two images" description="Compare two images selected in the table" category="_FfLq1BlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuKxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.navigate.showIn" commandName="Show In" category="_FfLq0hlpEeWdHJ2lhKXE6g">
+    <parameters xmi:id="_FfOuLBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.navigate.showIn.targetId" name="Show In Target Id" optional="false"/>
+  </commands>
+  <commands xmi:id="_FfOuLRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.help.displayHelp" commandName="Display Help" description="Display a Help topic" category="_FfLq2BlpEeWdHJ2lhKXE6g">
+    <parameters xmi:id="_FfOuLhlpEeWdHJ2lhKXE6g" elementId="href" name="Help topic href"/>
+  </commands>
+  <commands xmi:id="_FfOuLxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.showViewMenu" commandName="Show View Menu" description="Show the view menu" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuMBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.showContextMenu" commandName="Show Context Menu" description="Show the context menu" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuMRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.navigate.backwardHistory" commandName="Backward History" description="Move backward in the editor navigation history" category="_FfLq0hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuMhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.navigate.previousTab" commandName="Previous Tab" description="Switch to the previous tab" category="_FfLq0hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuMxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.file.refresh" commandName="Refresh" description="Refresh the selected items" category="_FfLq1RlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuNBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.navigate.forward" commandName="Forward" description="Navigate forward" category="_FfLq0hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuNRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.nextPerspective" commandName="Next Perspective" description="Switch to the next perspective" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuNhlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.window.closeAllPerspectives" commandName="Close All Perspectives" description="Close all open perspectives" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <commands xmi:id="_FfOuNxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.ToggleCoolbarAction" commandName="Toggle Toolbar Visibility" description="Toggles the visibility of the window toolbar" category="_FfLq1hlpEeWdHJ2lhKXE6g"/>
+  <addons xmi:id="_Fe5-CBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
+  <addons xmi:id="_Fe5-CRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
+  <addons xmi:id="_Fe5-ChlpEeWdHJ2lhKXE6g" elementId="org.eclipse.e4.ui.bindings.service" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
+  <addons xmi:id="_Fe5-CxlpEeWdHJ2lhKXE6g" elementId="org.eclipse.e4.ui.workbench.commands.model" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.CommandProcessingAddon"/>
+  <addons xmi:id="_Fe5-DBlpEeWdHJ2lhKXE6g" elementId="org.eclipse.e4.ui.workbench.contexts.model" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.ContextProcessingAddon"/>
+  <addons xmi:id="_Fe5-DRlpEeWdHJ2lhKXE6g" elementId="org.eclipse.e4.ui.workbench.bindings.model" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.swt/org.eclipse.e4.ui.workbench.swt.util.BindingProcessingAddon"/>
+  <addons xmi:id="_Fe5-DhlpEeWdHJ2lhKXE6g" elementId="Cleanup Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.cleanupaddon.CleanupAddon"/>
+  <addons xmi:id="_Fe5-DxlpEeWdHJ2lhKXE6g" elementId="DnD Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.dndaddon.DnDAddon"/>
+  <addons xmi:id="_Fe5-EBlpEeWdHJ2lhKXE6g" elementId="MinMax Addon" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.MinMaxAddon"/>
+  <addons xmi:id="_Fe5-ERlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.workbench.addon.0" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.workbench/org.eclipse.e4.ui.internal.workbench.addons.HandlerProcessingAddon"/>
+  <categories xmi:id="_FfLq0BlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>
+  <categories xmi:id="_FfLq0RlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.category.perspectives" name="Perspectives" description="Commands for opening perspectives"/>
+  <categories xmi:id="_FfLq0hlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.category.navigate" name="Navigate"/>
+  <categories xmi:id="_FfLq0xlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.category.edit" name="Edit"/>
+  <categories xmi:id="_FfLq1BlpEeWdHJ2lhKXE6g" elementId="com.arm.mali.texturecompressiontool.command.category.mali" name="Mali_commands" description="Commands related to the Texture Compression View "/>
+  <categories xmi:id="_FfLq1RlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.category.file" name="File"/>
+  <categories xmi:id="_FfLq1hlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.category.window" name="Window"/>
+  <categories xmi:id="_FfLq1xlpEeWdHJ2lhKXE6g" elementId="org.eclipse.core.commands.categories.autogenerated" name="Uncategorized" description="Commands that were either auto-generated or have no category"/>
+  <categories xmi:id="_FfLq2BlpEeWdHJ2lhKXE6g" elementId="org.eclipse.ui.category.help" name="Help"/>
+</application:Application>

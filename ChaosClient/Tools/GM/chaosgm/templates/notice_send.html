@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% block title %}{% trans 'notice' %}{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 well">
+                <h5>{% trans 'notice_send_result' %}</h5>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

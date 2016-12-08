@@ -1,0 +1,101 @@
+{% load i18n %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'flatui/css/vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'flatui/css/flat-ui.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'flatui/css/chaosgm.css' %}">
+    <script type="text/javascript" src="{% static 'flatui/js/vendor/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'flatui/js/flat-ui.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'flatui/js/vendor/jquery.toaster.js' %}"></script>
+    <script src="/jsi18n"></script>
+    <script type="text/javascript" src="{% static 'js/chaos.js' %}"></script>
+
+    <script>
+        var csrf_token = "{{ csrf_token }}"
+
+        $(document).ready(function () {
+            {% if messages %}
+                {% for iter in messages %}
+                    $.toaster({priority: '{{ iter.tags}}', title: {% trans 'op_result' %}, message: '{{ iter.message}}'});
+                {% endfor %}
+            {% endif %}
+
+            $(".navbar-collapse #id-navbar-left a").click(function (e) {
+                var link = $(this).attr("href")
+                setCookie("gm_back_link",link)
+            });
+        })
+    </script>
+    {% block extrahead %}{% endblock %}
+</head>
+<body>
+<!--Here is the navbar-->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-basepage">
+            <ul class="nav navbar-nav" id="id-navbar-left">
+                <li id="homepage"><a href="{% url 'homepage' %}">{% trans 'homepage' %}</a></li>
+                {% if user %}
+                    <li id="notice"><a href="{% url 'notice' %}">{% trans 'notice' %}</a></li>
+                    <li id="account"><a href="{% url 'account' %}">{% trans 'account_check' %}</a></li>
+                    <li id="ban_edit"><a href="{% url 'ban_edit' %}">{% trans 'ban_unban' %}</a></li>
+                    <li id="flashnews"><a href="{% url 'flashnews' %}">{% trans 'flashnews' %}</a></li>
+                    <li id="server"><a href="{% url 'server' %}">{% trans 'server' %}</a></li>
+                    <li id="gamemail">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+                           aria-expanded="false">
+                            {% trans 'mail' %} <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'gamemail' %}">{% trans 'sendmail' %}</a></li>
+                            <li><a href="{% url 'gamemail_list' %}">{% trans 'history' %}</a></li>
+                        </ul>
+                    </li>
+                {% endif %}
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                {% if user %}
+                    <li><p class="navbar-text">{% trans 'welcome' %}&nbsp;&nbsp;<span id="base_name">{{ user.username }}</span></p>
+                    </li>
+                    <li><a href="{% url 'logout' %}">{% trans 'logout' %}</a></li>
+                {% else %}
+                    <li><a href="{% url 'login' %}">{% trans 'login' %}</a></li>
+                {% endif %}
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<!-- /nav -->
+<!-- header -->
+<header class="jumbotron subhead" id="header-base">
+
+</header>
+<!-- /.header -->
+<!-- main part -->
+{% block content %}{% endblock %}
+<!-- /.main -->
+
+<!-- footer -->
+<footer class="footer" role="contentinfo">
+    <hr>
+    <div class="container">
+        <p class="text-center"><strong>maplegame</strong></p>
+        <p class="text-center">©All rights reserved</p>
+    </div>
+</footer>
+<!-- /.footer-->
+<script type="text/javascript">
+    $('#{{active_menu}}').addClass("active");
+</script>
+</body>
+</html>

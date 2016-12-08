@@ -1,0 +1,368 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-15 11:18+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\templates\account\account.html:23 .\templates\base.html.py:48
+msgid "account_check"
+msgstr "Account query"
+
+#: .\templates\account\account.html:34 .\templates\ban\ban_edit.html.py:49
+#: .\templates\base.html:51 .\templates\server.html.py:35
+msgid "server"
+msgstr "server"
+
+#: .\templates\account\account.html:50
+msgid "id_in_game_setting"
+msgstr "the ID in the setting UI of game"
+
+#: .\templates\account\account.html:53
+msgid "game_name"
+msgstr "name"
+
+#: .\templates\account\account.html:55
+msgid "name_in_game"
+msgstr "name in game"
+
+#: .\templates\account\account.html:57
+msgid "run_check"
+msgstr "Account query"
+
+#: .\templates\account\account.html:64
+msgid "run_check_result"
+msgstr "Query result"
+
+#: .\templates\admin\base_site.html:3
+msgid "Django site admin"
+msgstr "Backend manage"
+
+#: .\templates\admin\base_site.html:8
+#: .\templates\gamemail\gamemail_send.html:12
+msgid "back"
+msgstr "Back"
+
+#: .\templates\ban\ban_edit.html:32 .\templates\base.html.py:49
+msgid "ban_unban"
+msgstr "ban/unban"
+
+#: .\templates\ban\ban_edit.html:64
+msgid "oper_reason"
+msgstr "operation reason"
+
+#: .\templates\ban\ban_edit.html:68
+msgid "ban_time"
+msgstr "ban time"
+
+#: .\templates\ban\ban_edit.html:70 .\templates\ban\ban_edit.html.py:71
+msgid "num_hour"
+msgstr "hour"
+
+#: .\templates\ban\ban_edit.html:72 .\templates\ban\ban_edit.html.py:73
+#: .\templates\ban\ban_edit.html:74
+msgid "num_day"
+msgstr "day"
+
+#: .\templates\ban\ban_edit.html:75
+msgid "forever"
+msgstr "forever"
+
+#: .\templates\ban\ban_edit.html:79
+msgid "ban_state"
+msgstr "ban state"
+
+#: .\templates\ban\ban_edit.html:81
+msgid "ban"
+msgstr "ban account"
+
+#: .\templates\ban\ban_edit.html:82
+msgid "ban_chat"
+msgstr "ban account"
+
+#: .\templates\ban\ban_edit.html:83
+msgid "unban"
+msgstr "unban account"
+
+#: .\templates\ban\ban_edit.html:84
+msgid "unban_chat"
+msgstr "unban chat"
+
+#: .\templates\ban\ban_edit.html:88
+msgid "submit"
+msgstr "submit"
+
+#: .\templates\ban\ban_edit.html:95 .\templates\base.html.py:59
+#: .\templates\flashnews\flashnews.html:72
+#: .\templates\gamemail\gamemail.html:122 .\templates\notice.html.py:45
+msgid "history"
+msgstr "history"
+
+#: .\templates\base.html:26
+msgid "op_result"
+msgstr "operation result"
+
+#: .\templates\base.html:45
+msgid "homepage"
+msgstr "homepage"
+
+#: .\templates\base.html:47 .\templates\notice.html.py:4
+#: .\templates\notice_send.html:4
+msgid "notice"
+msgstr "notice"
+
+#: .\templates\base.html:50 .\templates\flashnews\flashnews.html.py:40
+msgid "flashnews"
+msgstr "flashnews"
+
+#: .\templates\base.html:55 .\templates\gamemail\gamemail.html.py:46
+msgid "mail"
+msgstr "mail"
+
+#: .\templates\base.html:58
+msgid "sendmail"
+msgstr "send mail"
+
+#: .\templates\base.html:67
+msgid "welcome"
+msgstr "welcome, "
+
+#: .\templates\base.html:69
+msgid "logout"
+msgstr "logout"
+
+#: .\templates\base.html:71 .\templates\login.html.py:5
+#: .\templates\login.html:30
+msgid "login"
+msgstr "login"
+
+#: .\templates\flashnews\flashnews.html:51
+#: .\templates\gamemail\gamemail.html:67
+#: .\templates\gamemail\gamemail_list.html:100 .\templates\server.html.py:46
+msgid "target_server"
+msgstr "target server"
+
+#: .\templates\flashnews\flashnews.html:56
+msgid "message"
+msgstr "message"
+
+#: .\templates\flashnews\flashnews.html:61
+#: .\templates\gamemail\gamemail.html:111
+#: .\templates\gamemail\gamemail_list.html:44
+msgid "send_date"
+msgstr "send date"
+
+#: .\templates\flashnews\flashnews.html:65
+#: .\templates\gamemail\gamemail.html:115
+msgid "save"
+msgstr "save"
+
+#: .\templates\gamemail\gamemail.html:56
+msgid "mail_title"
+msgstr "mail title"
+
+#: .\templates\gamemail\gamemail.html:61
+msgid "mail_content"
+msgstr "mail content"
+
+#: .\templates\gamemail\gamemail.html:68
+msgid "only_whole_server_mail_can_select_muti"
+msgstr "Only full-service mail can select multiple target servers"
+
+#: .\templates\gamemail\gamemail.html:73
+msgid "send_whole_server_mail"
+msgstr "Send full-service mail"
+
+#: .\templates\gamemail\gamemail.html:79
+msgid "to_these_accounts"
+msgstr "Send mail to the following account"
+
+#: .\templates\gamemail\gamemail.html:80
+msgid "type_enter_to_split"
+msgstr "Press Enter to split account"
+
+#: .\templates\gamemail\gamemail.html:88
+msgid "add_attach_item"
+msgstr "Adding attach item"
+
+#: .\templates\gamemail\gamemail.html:90
+msgid "item"
+msgstr "item"
+
+#: .\templates\gamemail\gamemail.html:91
+msgid "coin"
+msgstr "coin"
+
+#: .\templates\gamemail\gamemail.html:92
+msgid "diamond"
+msgstr "diamond"
+
+#: .\templates\gamemail\gamemail.html:97
+#: .\templates\gamemail\gamemail_list.html:126
+msgid "type"
+msgstr "type"
+
+#: .\templates\gamemail\gamemail.html:99
+#: .\templates\gamemail\gamemail_list.html:128
+msgid "num"
+msgstr "num"
+
+#: .\templates\gamemail\gamemail.html:137
+msgid "besure_to_send_this_mail"
+msgstr "Sure you want to issue the following mail it?"
+
+#: .\templates\gamemail\gamemail.html:145
+#: .\templates\gamemail\gamemail.html:166
+#: .\templates\gamemail\gamemail_list.html:207
+msgid "close"
+msgstr "close"
+
+#: .\templates\gamemail\gamemail.html:146
+#: .\templates\gamemail\gamemail_list.html:201
+#: .\templates\gamemail\gamemail_list.html:208
+msgid "confirm"
+msgstr "confirm"
+
+#: .\templates\gamemail\gamemail.html:158
+msgid "submit_content_has_these_error"
+msgstr "Submission following error"
+
+#: .\templates\gamemail\gamemail_list.html:4
+#: .\templates\gamemail\gamemail_list.html:33
+msgid "send_mail_history"
+msgstr "Send mail history"
+
+#: .\templates\gamemail\gamemail_list.html:34
+msgid "send_mail_history_tip"
+msgstr ""
+"Here you can view the status has been re-send the message failed to send the "
+"message. Please note that here retransmission timeout message is secure, and "
+"will not lead to many players receive mail"
+
+#: .\templates\gamemail\gamemail_list.html:42
+msgid "already_send"
+msgstr "Has been sent"
+
+#: .\templates\gamemail\gamemail_list.html:43
+msgid "operater"
+msgstr "Operator"
+
+#: .\templates\gamemail\gamemail_list.html:45
+msgid "is_whole_server_mail"
+msgstr "Whether full-service mail"
+
+#: .\templates\gamemail\gamemail_list.html:46
+#: .\templates\gamemail\gamemail_list.html:94
+#: .\templates\gamemail\gamemail_list.html:101
+msgid "state"
+msgstr "state"
+
+#: .\templates\gamemail\gamemail_list.html:102 .\templates\server.html.py:51
+msgid "oper"
+msgstr "operating"
+
+#: .\templates\gamemail\gamemail_list.html:122
+msgid "attachment"
+msgstr "attachment"
+
+#: .\templates\gamemail\gamemail_list.html:144
+msgid "target_account"
+msgstr "Target Account"
+
+#: .\templates\gamemail\gamemail_list.html:204
+msgid "besure_to_delete_mail"
+msgstr "You sure you want to delete the e-mail message it?"
+
+#: .\templates\gamemail\gamemail_send.html:11
+msgid "mail_result_1"
+msgstr "Mail has entered the queue, you can"
+
+#: .\templates\gamemail\gamemail_send.html:11
+msgid "mail_result_2"
+msgstr "here"
+
+#: .\templates\gamemail\gamemail_send.html:11
+msgid "mail_result_3"
+msgstr "see the results, or"
+
+#: .\templates\gamemail\gamemail_send.html:12
+msgid "continue_to_send"
+msgstr "continue to send"
+
+#: .\templates\index.html:10
+msgid "building"
+msgstr "under construction"
+
+#: .\templates\language.html:7
+msgid "out_of_time"
+msgstr "out of time"
+
+#: .\templates\language.html:8
+msgid "error_code"
+msgstr "error code"
+
+#: .\templates\language.html:9
+msgid "success"
+msgstr "success"
+
+#: .\templates\language.html:10
+msgid "sending"
+msgstr "sending"
+
+#: .\templates\language.html:11
+msgid "resend_mail_tip"
+msgstr "Multiple clicks retransmission is safe, do not worry about duplicate mail"
+
+#: .\templates\language.html:12
+msgid "resend"
+msgstr "resend"
+
+#: .\templates\login.html:14
+msgid "account_error"
+msgstr "User does not exist or the password is wrong"
+
+#: .\templates\login.html:20
+msgid "account_name"
+msgstr "username:"
+
+#: .\templates\login.html:26
+msgid "account_password"
+msgstr "password:"
+
+#: .\templates\notice.html:32
+msgid "content_is"
+msgstr "content:"
+
+#: .\templates\notice.html:37
+msgid "send_change"
+msgstr "Send the modified"
+
+#: .\templates\notice_send.html:11
+msgid "notice_send_result"
+msgstr ""
+"Modify announcement has been sent, wait 1-2 minutes after the entry into "
+"force"
+
+#: .\templates\server.html:56
+msgid "add_parm"
+msgstr "Additional parameters"
+
+#: .\templates\server.html:61
+msgid "oper_result"
+msgstr "Operating Results"
+
+#: .\templates\server.html:66
+msgid "run"
+msgstr "run"

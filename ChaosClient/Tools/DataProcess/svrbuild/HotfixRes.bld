@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project version='8' encrypted='1'>
+	<steps type='0'>
+		<step action='Group'>
+			<failsubroutine>HandleError</failsubroutine>
+			<name>ServerHotfixRes</name>
+		</step>
+		<step action='Batch File'>
+			<CmdStr>plink %LINUX_INFO% %LINUX_INFO_SCRIPT_PUBLISH%</CmdStr>
+			<CmdType type='3'>1</CmdType>
+			<NoEcho type='11'>-1</NoEcho>
+			<failsubroutine>HandleError</failsubroutine>
+			<indent type='3'>1</indent>
+			<name>ServerHotfixRes</name>
+		</step></steps>
+	<macros>
+		<macro name='CONFIG_LINUX_INFO_IP'>
+			<value>192.168.1.250</value>
+		</macro>
+		<macro name='CONFIG_LINUX_INFO_PASSWORD'>
+			<value>maple</value>
+		</macro>
+		<macro name='CONFIG_LINUX_INFO_PORT'>
+			<value>36000</value>
+		</macro>
+		<macro name='CONFIG_LINUX_INFO_USER'>
+			<value>maple</value>
+		</macro>
+		<macro name='GLB_SAMBA_AUTH'>
+			<description>samba映射linux的盘符</description>
+			<value>/persistent:yes 1234 /user:maple</value>
+		</macro>
+		<macro name='GLB_SAMBA_HOME'>
+			<description>samba映射linux的盘符</description>
+			<value>\\%CONFIG_LINUX_INFO_IP%\maple</value>
+		</macro>
+		<macro name='LINUX_INFO'>
+			<description><![CDATA[发版本的人的linux用户信息
+
+]]></description>
+			<value>-auto_store_key_in_cache -l %CONFIG_LINUX_INFO_USER%   -P  %CONFIG_LINUX_INFO_PORT%   -pw  %CONFIG_LINUX_INFO_PASSWORD%   %CONFIG_LINUX_INFO_IP%</value>
+		</macro>
+		<macro name='LINUX_INFO_SCRIPT_PUBLISH'>
+			<description><![CDATA[
+
+]]></description>
+			<value>cd ~/ChaosServer; ./hotfix_res.sh</value>
+		</macro>
+		<macro name='LINUX_INFO_SCRIPTDIR'>
+			<description><![CDATA[
+
+]]></description>
+			<value>/home/maple</value>
+		</macro></macros>
+	<script language='VBScript'><![CDATA[Function IncreaseVersion(OriginalVer)
+	Dim MyString
+	MyString = CStr(OriginalVer + 1)
+	'While Len(MyString) < 4
+	'	MyString = 0 & MyString
+	'Wend
+	IncreaseVersion = MyString
+End Function
+
+Function IncreaseVersion4Digtals(OriginalVer)
+	Dim MyString
+	MyString = CStr(OriginalVer + 1)
+	While Len(MyString) < 4
+		MyString = 0 & MyString
+	Wend
+	IncreaseVersion4Digtals = MyString
+End Function
+
+Function GetClientSize(filespec)
+	Dim File
+	Set File = vbld_FSO.GetFile(filespec)
+	GetClientSize = FormatNumber(File.size,0,,,vbTrue)
+End Function
+
+Function GetClientGSize(filespec)
+	Dim Size
+	Size = GetClientSize(filespec)
+	GetClientGSize = FormatNumber(Size/(1024 ^ 3),2)
+End Function
+
+Function GetClientMBSize(filespec)
+	Dim Size
+	Size = GetClientSize(filespec)
+	GetClientMBSize = FormatNumber(Size/(1024 ^ 2),2)
+End Function
+
+Function GetDiskFreespace(target)
+	Dim drive
+	Set drive = vbld_FSO.GetDrive(target)
+	GetDiskFreespace = drive.FreeSpace / (1024 ^ 2)
+End Function
+
+Function Base64Encode(psText)
+	Dim oXml, oStream, oNode
+	Set oXml = CreateObject("MSXML2.DOMDocument")
+	Set oStream = CreateObject("ADODB.Stream")
+	Set oNode =oXml.CreateElement("tmpNode")
+	oNode.dataType ="bin.base64"
+	oStream.Charset ="gb2312"
+	oStream.Type =2'0=adStateClosed 1=adStateOpen
+	If oStream.state =0 Then oStream.Open()
+	oStream.WriteText(psText)
+	oStream.Position =0
+	oStream.Type =1'1=adTypeBinary   2=adTypeText
+	oNode.nodeTypedValue =oStream.Read(-1)'-1=adReadAll
+	oStream.Close()
+	Base64Encode = oNode.Text
+	Set oNode =Nothing
+	Set oStream =Nothing
+	Set oXml =Nothing
+End Function
+
+Function MakeSubject(text)
+	MakeSubject = "=?GB2312?B?" & Base64Encode(text) & "?="
+End Function
+
+Function doWebRes(version)
+	if version = "internal" then
+	   doWebRes = 1
+	elseif version = "genericbranch" then
+	   doWebRes = 1
+	else
+	   doWebRes = 0
+	end if
+End Function]]></script>
+</project>

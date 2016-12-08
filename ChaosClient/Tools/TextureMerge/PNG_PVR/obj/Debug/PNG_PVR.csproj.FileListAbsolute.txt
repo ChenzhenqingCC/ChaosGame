@@ -1,0 +1,6 @@
+F:\work\Chaos\ChaosClient\Tools\TextureMerge\PNG_PVR\bin\Debug\PNG_PVR.exe.config
+F:\work\Chaos\ChaosClient\Tools\TextureMerge\PNG_PVR\bin\Debug\PNG_PVR.exe
+F:\work\Chaos\ChaosClient\Tools\TextureMerge\PNG_PVR\bin\Debug\PNG_PVR.pdb
+F:\work\Chaos\ChaosClient\Tools\TextureMerge\PNG_PVR\obj\Debug\PNG_PVR.exe
+F:\work\Chaos\ChaosClient\Tools\TextureMerge\PNG_PVR\obj\Debug\PNG_PVR.pdb
+F:\work\Chaos\ChaosClient\Tools\TextureMerge\PNG_PVR\obj\Debug\PNG_PVR.csprojResolveAssemblyReference.cache

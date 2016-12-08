@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+
+
+{% block extrahead %}
+    <script type="text/javascript">
+        var django = django || {};
+        django.jQuery = $
+    </script>
+    <script type="text/javascript" src="{% url 'admin:jsi18n' %}"></script>
+    <script type="text/javascript" src="/static/admin/js/core.js"></script>
+    {{ form.media }}
+    <style type="text/css">
+        .selector h2 {
+            font-size: 1.2em;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+
+        .selector-chosen h2 {
+            background: #1ABC9C;
+            color: #fff;
+        }
+
+        .clockbox h2 {
+            font-size: 1.2em;
+            padding: 0px 10px 0px 10px;
+            border-bottom: 0px;
+        }
+
+        {#        .form-group{#}
+        {#             padding-bottom: 15px;#}
+        {#             border-bottom:1px solid #bfbfbf;#}
+        {#        }#}
+    </style>
+{% endblock %}
+
+{% block title %}{% trans 'flashnews' %}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-8">
+                <form action="/flashnews" method="post" class="form-horizontal">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                        {{ form.server.errors }}
+                        <label for="{{ form.server.id_for_label }}" class="control-label">{% trans 'target_server' %}:</label>
+                        <div class="control-label">{{ form.server }}</div>
+                    </div>
+                    <div class="form-group">
+                        {{ form.message.errors }}
+                        <label for="id_message" class="control-label">{% trans 'message' %}:</label>
+                        <textarea cols="40" class="form-control" id="id_message" name="message" rows="10"></textarea>
+                    </div>
+                    <div class="form-group">
+                        {{ form.send_date.errors }}
+                        <label for="{{ form.send_date.id_for_label }}" class="control-label">{% trans 'send_date' %}:</label>
+                        {{ form.send_date }}
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn btn-primary btn-block" type="submit">{% trans 'save' %}</button>
+                    </div>
+                </form>
+            </div>
+            <div  class=col-md-2 col-md-offset-2>
+                <ul class="object-tools">
+                    <li>
+                        <a href="/flashnews_list" class="historylink">{% trans 'history' %}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}

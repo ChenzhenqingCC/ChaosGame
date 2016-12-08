@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'fastselect/fastselect.min.css' %}">
+    <script src="{% static 'fastselect/fastselect.standalone.js' %}"></script>
+    <style>
+       #result_row{
+           margin: 10px 0px 10px 0px;
+       }
+         .fstElement {
+            font-size: 0.5em;
+        }
+
+        .fstToggleBtn {
+            min-width: 15em;
+        }
+
+    </style>
+{% endblock %}
+
+
+{% block title %}{% trans 'account_check' %}{% endblock %}
+
+{% block content %}
+    <div class="container">
+
+        <div class="row ">
+            <div class="col-md-12">
+
+                <form class="form-inline" method="POST" content='text/html; charset=UTF-8'>
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_server" class="control-label">{% trans 'server' %}:</label>
+                        <select id="id_server" require name="server">
+                            {% for info in servers %}
+                                {% if info.id == server_id %}
+                                    <option value="{{ info.id }}" selected="selected">{{ info.name }}</option>
+                                {% else %}
+                                    <option value="{{ info.id }}">{{ info.name }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                        <script>
+                            $('#id_server').fastselect();
+                        </script>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_account">ID</label>
+                        <input type="text" class="form-control" id="id_account" name="account" placeholder="{% trans 'id_in_game_setting' %}">
+                    </div>
+                    <div class="form-group">
+                        <label for="id_name">{% trans 'game_name' %}</label>
+                        <input type="text" class="form-control" id="id_name" name="name"
+                               placeholder="{% trans 'name_in_game' %}">
+                    </div>
+                    <button type="submit" class="btn btn-primary">{% trans 'run_check' %}</button>
+                </form>
+            </div>
+        </div>
+        {% if attr_list %}
+            <div class="row" id ="result_row">
+                <div class="panel panel-default">
+                    <div class="panel-heading">{% trans 'run_check_result' %}</div>
+
+                    <ul class="list-group">
+                        {% for attr in attr_list %}
+                            <li class="list-group-item">
+                                <strong>{{ attr.name }}:</strong>
+                                {{ attr.value }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+    </div>
+{% endblock %}

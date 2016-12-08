@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block extrahead %}
+    <link rel="stylesheet" href="{% static 'fastselect/fastselect.min.css' %}">
+    <script src="{% static 'fastselect/fastselect.standalone.js' %}"></script>
+
+    <style>
+        .fstElement {
+            font-size: 0.6em;
+        }
+
+        .fstToggleBtn {
+            min-width: 20em;
+        }
+
+        .submitBtn {
+            display: none;
+        }
+
+        .fstMultipleMode {
+            display: block;
+        }
+
+        .fstMultipleMode .fstControls {
+            width: 100%;
+        }
+    </style>
+{% endblock %}
+
+{% block title %}{% trans 'ban_unban' %}{% endblock %}
+
+{% block content %}
+    <div class="container">
+
+        <div class="row ">
+            <div class="col-md-8">
+                {% if error %}
+                    <div class="row">
+                        <div class="well">
+                            <h6 class="text-danger text-center">{{ error }}</h6>
+                        </div>
+                    </div>
+                {% endif %}
+                <form method="POST" role="form" class="form-horizontal" content='text/html; charset=UTF-8'>
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_server" class="control-label">{% trans 'server' %}:</label>
+                        <select id="id_server" require name="server">
+                            {% for info in servers %}
+                                <option value="{{ info.id }}">{{ info.name }}</option>
+                            {% endfor %}
+                        </select>
+                        <script>
+                            $('#id_server').fastselect();
+                        </script>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_user_name" class="control-label">ID:</label>
+                        <input type="text" class="form-control" id="id_account" required name="account" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_reason" class="control-label">{% trans 'oper_reason' %}:</label>
+                        <input type="text" class="form-control" id="id_reason" required name="reason" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_time" class="control-label">{% trans 'ban_time' %}:</label>
+                        <select id="id_time" required name="time" class="form-control">
+                            <option value="1">1{% trans 'num_hour' %}</option>
+                            <option value="2">2{% trans 'num_hour' %}</option>
+                            <option value="24">1{% trans 'num_day' %}</option>
+                            <option value="72">3{% trans 'num_day' %}</option>
+                            <option value="168">7{% trans 'num_day' %}</option>
+                            <option value="0">{% trans 'forever' %}</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_ban_type" class="control-label">{% trans 'ban_state' %}:</label>
+                        <select id="id_ban_type" required name="ban_type" class="form-control">
+                            <option value="ban_login">{% trans 'ban' %}</option>
+                            <option value="ban_chat">{% trans 'ban_chat' %}</option>
+                            <option value="unban_login">{% trans 'unban' %}</option>
+                            <option value="unban_chat">{% trans 'unban_chat' %}</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary btn-block col-md-1" type="submit">{% trans 'submit' %}</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-2 col-md-offset-1">
+                <ul class="object-tools">
+                    <li>
+                        <a href="/ban_list" class="historylink">{% trans 'history' %}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

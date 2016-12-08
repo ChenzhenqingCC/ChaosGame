@@ -1,0 +1,55 @@
+1.install
+python 2.7.11
+pip
+pycrypto
+
+you can find the install files under /depend fold
+
+
+then use pip to install:
+paramiko
+apscheduler
+django-timezone-field
+openpyxl
+
+(for example:pip install paramiko)
+
+
+2.init database
+under chaosgm fold,run command:
+
+python manage.py makemigrations
+
+python manage.py migrate
+
+3.create super admin account
+python manage.py createsupperuser
+
+
+4.start webserver
+python manage.py runserver --noreload 127.0.0.1:8000
+
+
+5.init your gm info
+use you web browser to visit:127.0.0.1:8000/admin/auth/user/
+click into your account and click the SAVE button on bottom webpage
+
+
+6.create servergroup in admin site(the servergroup is used for send the login annoucement)
+
+use you web browser to visit:127.0.0.1:8000/admin/gm/servergroup/
+add servergroup with correct url
+
+
+7.visit 127.0.0.1:8000/account to see the gm website is success startup
+
+
+8.About website language and time zone:
+
+The default language is Chinese,to change in English,you can edit the settings.py under chaosgm/chaosgm fold,modify the LANGUAGE_CODE to "EN".
+the TIME_ZONE setting is just under the LANGUAGE_CODE,you can change it to such as "asia/taipei" or else
+
+
+
+
+

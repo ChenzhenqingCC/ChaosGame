@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% block title %}gmcenter{% endblock %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 well">
+                <h5>{% trans 'mail_result_1' %}<a href="/gamemail_list" onmouseover='' style='cursor: pointer;'>{% trans 'mail_result_2' %}</a>{% trans 'mail_result_3' %}<a
+                        href="/gamemail" onmouseover='' style='cursor: pointer;'>{% trans 'back' %}</a>{% trans 'continue_to_send' %}</h5>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

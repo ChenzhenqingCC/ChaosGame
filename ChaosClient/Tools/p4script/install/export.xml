@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--perforce-xml-version=1.0-->
+<CustomToolDefList varName="customtooldeflist">
+ <CustomToolDef>
+  <Definition>
+   <Name>export_changelist</Name>
+   <Command>python </Command>
+   <Arguments>export_changelist.py $c $u %c </Arguments>
+   <InitDir>D:\p4_workplace\wuyin_wuyin-pc_889\ChaosClient\Tools\p4script\</InitDir>
+  </Definition>
+  <Console>
+   <CloseOnExit>false</CloseOnExit>
+  </Console>
+  <AddToContext>true</AddToContext>
+ </CustomToolDef>
+ <CustomToolDef>
+  <Definition>
+   <Name>export_files</Name>
+   <Command>python</Command>
+   <Arguments>export_files.py $c $u %D</Arguments>
+   <InitDir>D:\p4_workplace\wuyin_wuyin-pc_889\ChaosClient\Tools\p4script</InitDir>
+  </Definition>
+  <Console>
+   <CloseOnExit>false</CloseOnExit>
+  </Console>
+  <AddToContext>true</AddToContext>
+ </CustomToolDef>
+</CustomToolDefList>

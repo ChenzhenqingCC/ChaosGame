@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+{% block title %}{% trans 'notice' %}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            {% for name in notice_names %}
+                {% if query_name == name %}
+                    <a href="{% url 'notice' %}?query_name={{ name }}" class="btn btn-info" role="button">{{ name }}</a>
+                {% else %}
+                    <a href="{% url 'notice' %}?query_name={{ name }}" class="btn btn-default"
+                       role="button">{{ name }}</a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10">
+                {% if error %}
+                    <div class="row">
+                        <div class="well">
+                            <h6 class="text-danger text-center">{{ error }}</h6>
+                        </div>
+                    </div>
+                {% endif %}
+                <form method="POST" role="form" class="form-horizontal" content='text/html; charset=UTF-8'>
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="id_content" class="control-label">{% trans 'content_is' %}</label>
+                        <textarea class="form-control" rows="30" id="id_content" required
+                                  name="notice_content">{{ content_list }}</textarea>
+                    </div>
+                    <div class="span4">
+                        <button class="btn btn btn-primary btn-block" type="submit">{% trans 'send_change' %}</button>
+                    </div>
+                    <input type="hidden" value={{ query_name }} id="id_hidden" required name="hidden_query_name"/>
+                </form>
+            </div>
+            <div  class=col-md-2 col-md-offset-2>
+                <ul class="object-tools">
+                    <li>
+                        <a href="/notice_list" class="historylink">{% trans 'history' %}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+{% endblock %}

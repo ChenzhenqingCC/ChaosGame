@@ -1,0 +1,266 @@
+<?xml version='1.0' encoding='utf-8'?>
+<project version='8' encrypted='1'>
+	<steps type='0'>
+		<step action='Group'>
+			<failsubroutine>HandleError</failsubroutine>
+			<name>ServerBuild</name>
+		</step>
+		<step action='Write File'>
+			<Append type='11'>-1</Append>
+			<Filename>%LOG%</Filename>
+			<Text><![CDATA[--%DATETIME% 服务器版本制作步骤开始
+]]></Text>
+			<buildfailsteps type='11'>0</buildfailsteps>
+			<checked type='11'>0</checked>
+			<continueonfail type='3'>1</continueonfail>
+			<indent type='3'>1</indent>
+			<name>Log</name>
+		</step>
+		<step action='Batch File'>
+			<CmdStr><![CDATA[net use %CONFIG_GLB_SAMBA_DRIVE%  /del
+net use %CONFIG_GLB_SAMBA_DRIVE%  %GLB_SAMBA_HOME% %GLB_SAMBA_AUTH%]]></CmdStr>
+			<CmdType type='3'>1</CmdType>
+			<NoEcho type='11'>-1</NoEcho>
+			<description>映射SAMBA</description>
+			<failsubroutine>HandleError</failsubroutine>
+			<indent type='3'>1</indent>
+			<name>SAMBA</name>
+			<retries>5</retries>
+			<retrypause>5</retrypause>
+		</step>
+		<step action='Batch File'>
+			<CmdStr>plink %LINUX_INFO% %LINUX_INFO_SCRIPT_PUBLISH%</CmdStr>
+			<CmdType type='3'>1</CmdType>
+			<NoEcho type='11'>-1</NoEcho>
+			<failsubroutine>HandleError</failsubroutine>
+			<indent type='3'>1</indent>
+			<name>BuildServer</name>
+		</step>
+		<step action='Copy Files'>
+			<Converted type='11'>-1</Converted>
+			<Delay>15</Delay>
+			<DestDir>%FILESVR%\%ZONE%\%VERSION%\server</DestDir>
+			<Ext>%PKG_PREFIX%_*</Ext>
+			<LogCopied type='11'>-1</LogCopied>
+			<ReadOnly type='11'>-1</ReadOnly>
+			<Restartable type='11'>-1</Restartable>
+			<Retries>10</Retries>
+			<SourceDir>%PKG%</SourceDir>
+			<TBD type='11'>-1</TBD>
+			<buildfailsteps type='11'>0</buildfailsteps>
+			<continueonfail type='3'>1</continueonfail>
+			<failsubroutine>HandleError</failsubroutine>
+			<indent type='3'>1</indent>
+			<name>CopyPkgToFileSvr</name>
+			<retries>10</retries>
+			<retrypause>10</retrypause>
+		</step>
+		<step action='Write File'>
+			<Append type='11'>-1</Append>
+			<Filename>%LOG%</Filename>
+			<Text><![CDATA[--%DATETIME% 服务器版本制作步骤结束
+]]></Text>
+			<buildfailsteps type='11'>0</buildfailsteps>
+			<checked type='11'>0</checked>
+			<continueonfail type='3'>1</continueonfail>
+			<indent type='3'>1</indent>
+			<name>Log</name>
+		</step></steps>
+	<steps type='2'>
+		<step action='Group'>
+			<name>HandleError</name>
+		</step>
+		<step action='Write File'>
+			<Append type='11'>-1</Append>
+			<Filename>%PROJDIR%\log\%VERSION%log.err</Filename>
+			<Text><![CDATA[错误分支: %BRANCH_CLIENT_NAME%
+错误步骤: %FAILSTEP_NAME%
+错误时间: %DATETIME%
+错误脚本: %COMPUTERNAME% '%PROJFILE%'  
+错误详细信息:
+----------------------------------------------------------------------------------------
+%FAILSTEP_OUTPUT%
+----------------------------------------------------------------------------------------]]></Text>
+			<Writeable type='11'>-1</Writeable>
+			<continueonfail type='3'>1</continueonfail>
+			<indent type='3'>1</indent>
+			<name>errlog</name>
+		</step>
+		<step action='Process Files'>
+			<FileExtensions>*.err</FileExtensions>
+			<FilePath>%SVR_LOG_DIR%</FilePath>
+			<HideOn type='11'>-1</HideOn>
+			<SysOn type='11'>-1</SysOn>
+			<description>检查是否有错误</description>
+			<failsubroutine>HandleError</failsubroutine>
+			<indent type='3'>1</indent>
+			<name>CheckErrorLog</name>
+		</step>
+		<step action='Read File'>
+			<FailNoMatch type='11'>-1</FailNoMatch>
+			<FileIn>%CONFIG_FILE_MAIL_LIST%</FileIn>
+			<Macro>MAIL_LIST</Macro>
+			<NoModS type='11'>-1</NoModS>
+			<indent type='3'>2</indent>
+			<name>ReadMailList</name>
+		</step>
+		<step action='Send Mail'>
+			<Attachments>%SVR_LOG_DIR%\%PROCFILES_FILENAME%</Attachments>
+			<Cc>%MAILTO%</Cc>
+			<From>%MAILFROM%</From>
+			<Logging type='3'>2</Logging>
+			<Message><![CDATA[错误分支:  %BRANCH_CLIENT_NAME%
+错误步骤:  服务器构建：%FAILSTEP_NAME%
+错误时间:  %DATETIME%
+错误版本:  %VERSION%
+错误构建机器: %COMPUTERNAME% 
+详细错误可见附件
+错误详细信息:
+----------------------------------------------------------------------------------------
+%FAILSTEP_OUTPUT%
+----------------------------------------------------------------------------------------
+]]></Message>
+			<Password encrypted='1'>Cc3IPOk8YeGtarq4u6Hfg2L9DpXvLg==</Password>
+			<Port>25</Port>
+			<ReturnSuccess type='11'>-1</ReturnSuccess>
+			<Server>tsmtp.tencent.com</Server>
+			<Subject>[[%VERSION%]]%BRANCH_CLIENT_NAME% Branch Build Error</Subject>
+			<Timeout>30</Timeout>
+			<To>%MAIL_LIST%</To>
+			<UserName>IEDOSS_SLA@tencent.com</UserName>
+			<continueonfail type='3'>1</continueonfail>
+			<description>发送邮件</description>
+			<indent type='3'>2</indent>
+			<name>Send Mail</name>
+			<nologging type='11'>-1</nologging>
+		</step></steps>
+	<macros>
+		<macro name='CONFIG_GLB_SAMBA_DRIVE'>
+			<value>T:</value>
+		</macro>
+		<macro name='CONFIG_LINUX_INFO_IP'>
+			<value>192.168.1.249</value>
+		</macro>
+		<macro name='CONFIG_LINUX_INFO_PASSWORD'>
+			<value>maple</value>
+		</macro>
+		<macro name='CONFIG_LINUX_INFO_PORT'>
+			<value>36000</value>
+		</macro>
+		<macro name='CONFIG_LINUX_INFO_USER'>
+			<value>maple</value>
+		</macro>
+		<macro name='FILESVR'>
+			<value>\\192.168.1.251\share\publish\versions</value>
+		</macro>
+		<macro name='GLB_SAMBA_AUTH'>
+			<description>samba映射linux的盘符</description>
+			<value>/persistent:yes 1234 /user:maple</value>
+		</macro>
+		<macro name='GLB_SAMBA_HOME'>
+			<description>samba映射linux的盘符</description>
+			<value>\\%CONFIG_LINUX_INFO_IP%\maple</value>
+		</macro>
+		<macro name='LINUX_INFO'>
+			<description><![CDATA[发版本的人的linux用户信息
+
+]]></description>
+			<value>-auto_store_key_in_cache -l %CONFIG_LINUX_INFO_USER%   -P  %CONFIG_LINUX_INFO_PORT%   -pw  %CONFIG_LINUX_INFO_PASSWORD%   %CONFIG_LINUX_INFO_IP%</value>
+		</macro>
+		<macro name='LINUX_INFO_SCRIPT_PUBLISH'>
+			<description><![CDATA[
+
+]]></description>
+			<value>./autobuild.sh %ZONE% %VERSION%</value>
+		</macro>
+		<macro name='LINUX_INFO_SCRIPTDIR'>
+			<description><![CDATA[
+
+]]></description>
+			<value>/home/maple</value>
+		</macro>
+		<macro name='LOG'>
+			<value>%PROJDIR%\log\%ZONE%_%VERSION%_timetable.txt</value>
+		</macro>
+		<macro name='PKG'>
+			<value>%CONFIG_GLB_SAMBA_DRIVE%\package</value>
+		</macro>
+		<macro name='PKG_PREFIX'>
+			<value>chaos_release_%ZONE%_%VERSION%</value>
+		</macro></macros>
+	<script language='VBScript'><![CDATA[Function IncreaseVersion(OriginalVer)
+	Dim MyString
+	MyString = CStr(OriginalVer + 1)
+	'While Len(MyString) < 4
+	'	MyString = 0 & MyString
+	'Wend
+	IncreaseVersion = MyString
+End Function
+
+Function IncreaseVersion4Digtals(OriginalVer)
+	Dim MyString
+	MyString = CStr(OriginalVer + 1)
+	While Len(MyString) < 4
+		MyString = 0 & MyString
+	Wend
+	IncreaseVersion4Digtals = MyString
+End Function
+
+Function GetClientSize(filespec)
+	Dim File
+	Set File = vbld_FSO.GetFile(filespec)
+	GetClientSize = FormatNumber(File.size,0,,,vbTrue)
+End Function
+
+Function GetClientGSize(filespec)
+	Dim Size
+	Size = GetClientSize(filespec)
+	GetClientGSize = FormatNumber(Size/(1024 ^ 3),2)
+End Function
+
+Function GetClientMBSize(filespec)
+	Dim Size
+	Size = GetClientSize(filespec)
+	GetClientMBSize = FormatNumber(Size/(1024 ^ 2),2)
+End Function
+
+Function GetDiskFreespace(target)
+	Dim drive
+	Set drive = vbld_FSO.GetDrive(target)
+	GetDiskFreespace = drive.FreeSpace / (1024 ^ 2)
+End Function
+
+Function Base64Encode(psText)
+	Dim oXml, oStream, oNode
+	Set oXml = CreateObject("MSXML2.DOMDocument")
+	Set oStream = CreateObject("ADODB.Stream")
+	Set oNode =oXml.CreateElement("tmpNode")
+	oNode.dataType ="bin.base64"
+	oStream.Charset ="gb2312"
+	oStream.Type =2'0=adStateClosed 1=adStateOpen
+	If oStream.state =0 Then oStream.Open()
+	oStream.WriteText(psText)
+	oStream.Position =0
+	oStream.Type =1'1=adTypeBinary   2=adTypeText
+	oNode.nodeTypedValue =oStream.Read(-1)'-1=adReadAll
+	oStream.Close()
+	Base64Encode = oNode.Text
+	Set oNode =Nothing
+	Set oStream =Nothing
+	Set oXml =Nothing
+End Function
+
+Function MakeSubject(text)
+	MakeSubject = "=?GB2312?B?" & Base64Encode(text) & "?="
+End Function
+
+Function doWebRes(version)
+	if version = "internal" then
+	   doWebRes = 1
+	elseif version = "genericbranch" then
+	   doWebRes = 1
+	else
+	   doWebRes = 0
+	end if
+End Function]]></script>
+</project>

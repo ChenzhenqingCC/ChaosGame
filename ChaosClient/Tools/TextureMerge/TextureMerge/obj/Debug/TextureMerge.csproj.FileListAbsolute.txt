@@ -1,0 +1,6 @@
+F:\work\Tools\TextureMerge\TextureMerge\bin\Debug\TextureMerge.exe.config
+F:\work\Tools\TextureMerge\TextureMerge\bin\Debug\TextureMerge.exe
+F:\work\Tools\TextureMerge\TextureMerge\bin\Debug\TextureMerge.pdb
+F:\work\Tools\TextureMerge\TextureMerge\obj\Debug\TextureMerge.exe
+F:\work\Tools\TextureMerge\TextureMerge\obj\Debug\TextureMerge.pdb
+F:\work\Tools\TextureMerge\TextureMerge\obj\Debug\TextureMerge.csprojResolveAssemblyReference.cache

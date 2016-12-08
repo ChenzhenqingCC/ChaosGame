@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load staticfiles %}
+
+
+{% block extrahead %}
+    <script type="text/javascript">
+        var django = django || {};
+        django.jQuery = $
+    </script>
+    <script type="text/javascript" src="{% url 'admin:jsi18n' %}"></script>
+    <script type="text/javascript" src="/static/admin/js/core.js"></script>
+    {{ form.media }}
+    <style type="text/css">
+        .selector h2 {
+            font-size: 1.2em;
+            padding-bottom: 0px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+
+        .selector-chosen h2 {
+            background: #1ABC9C;
+            color: #fff;
+        }
+
+        .clockbox h2 {
+            font-size: 1.2em;
+            padding: 0px 10px 0px 10px;
+            border-bottom: 0px;
+        }
+    </style>
+{% endblock %}
+
+{% block title %}{% trans 'server' %}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-12">
+                <form action="/server" method="post" class="form-horizontal">
+                    {% csrf_token %}
+
+                    <div class="form-group">
+                        {{ form.server.errors }}
+                        <label for="{{ form.server.id_for_label }}" class="control-label">{% trans 'target_server' %}:</label>
+                        <div class="control-label">{{ form.server }}</div>
+                    </div>
+                     <div class="form-group">
+                        {{ form.op.errors }}
+                        <label for="{{ form.op.id_for_label }}" class="control-label">{% trans 'oper' %}:</label>
+                        {{ form.op }}
+                    </div>
+                     <div class="form-group">
+                        {{ form.param.errors }}
+                        <label for="{{ form.param.id_for_label }}" class="control-label">{% trans 'add_parm' %}:</label>
+                        {{ form.param }}
+                    </div>
+                    <div class="well">
+                        {{ form.result.errors }}
+                        <label for="{{ form.result.id_for_label }}" class="control-label">{% trans 'oper_result' %}:</label>
+                        {{ form.result }}
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn btn-primary btn-block" type="submit">{% trans 'run' %}</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

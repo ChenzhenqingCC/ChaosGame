@@ -1,0 +1,4 @@
+P4CLIENT=chaos_ccb_pub
+P4PASSWD=maple123
+P4PORT=192.168.1.251:1999
+P4USER=chenzhenqing

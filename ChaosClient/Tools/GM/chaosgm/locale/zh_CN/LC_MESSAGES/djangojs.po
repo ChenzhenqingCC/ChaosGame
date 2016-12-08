@@ -1,0 +1,102 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-15 10:16+0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .\static\js\gamemail.js:14
+msgid "please_choose_server"
+msgstr "请选择服务器"
+
+#: .\static\js\gamemail.js:19
+msgid "nowhole_server_mail_can_only_select_one_server"
+msgstr "非全服邮件只能选择一个目标服务器"
+
+#: .\static\js\gamemail.js:22
+msgid "nowhole_server_mail_must_has_target_account"
+msgstr "非全服邮件必须填写目标账号"
+
+#: .\static\js\gamemail.js:28
+msgid "no_send_date"
+msgstr "没有填写发送日期"
+
+#: .\static\js\gamemail.js:36
+msgid "item_must_have_id"
+msgstr "道具必须填写数字id"
+
+#: .\static\js\gamemail.js:41
+msgid "attach_num_must_be_number"
+msgstr "附件中物品数量必须为数字"
+
+#: .\static\js\gamemail.js:111
+msgid "please_enter_id"
+msgstr "请输入id"
+
+#: .\static\js\gamemail.js:116
+msgid "please_enter_num"
+msgstr "请输入数量"
+
+#: .\static\js\gamemail.js:158
+msgid "validating"
+msgstr "验证中"
+
+#: .\static\js\gamemail.js:172
+msgid "item_not_exist"
+msgstr "不存在的道具"
+
+#: .\static\js\gamemail.js:175
+msgid "account_not_exist"
+msgstr "不存在的账号"
+
+#: .\static\js\gamemail.js:203
+msgid "validate_fail"
+msgstr "验证失败"
+
+#: .\static\js\gamemail.js:227
+msgid "target_server"
+msgstr "目标服务器"
+
+#: .\static\js\gamemail.js:232
+msgid "target_account"
+msgstr "目标账号"
+
+#: .\static\js\gamemail.js:237
+msgid "send_date"
+msgstr "发送日期"
+
+#: .\static\js\gamemail.js:238
+msgid "attachment"
+msgstr "附件"
+
+#: .\static\js\gamemail.js:265
+msgid "num"
+msgstr "数量"
+
+#: .\static\js\gamemail.js:267
+msgid "item_name"
+msgstr "道具名"
+
+#: .\static\js\gamemail.js:283
+msgid "whole_server"
+msgstr "全服"
+
+#: .\static\js\gamemail.js:289
+msgid "account_name"
+msgstr "名字"
+
+#: .\static\js\gamemail.js:295
+msgid "none"
+msgstr "无"
